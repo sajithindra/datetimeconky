@@ -1,0 +1,16 @@
+How to use:
+
+Save this as install_conky.sh
+
+Run:
+
+chmod +x install_conky.sh
+./install_conky.sh
+
+It will:
+
+Install Conky
+Create your config
+Make it auto-start
+Launch it immediately
+
