@@ -10,6 +10,7 @@ sudo apt install -y conky-all
 # Create config directory
 mkdir -p ~/.config/conky
 
+echo "[+] creating conky.conf file..."
 # Create Conky config file
 cat > ~/.config/conky/conky.conf << 'EOF'
 conky.config = {
@@ -57,7 +58,7 @@ conky.config = {
 };
 
 conky.text = [[
-${alignc}${font Anurati:size=75}${color D6D5D4}${time %A}
+${alignc}${font Anurati:size=75}${color D6D5D4}${exec bash -c "date +%A | sed 's/./& /g'"}
 ${voffset 5}${alignc}${font Saira:size=35}${time %I:%M:%S %p}
 ${voffset 5}${alignc}${font Saira:size=16}${time %d %B %Y}
 ${voffset 10}${alignc}${font Saira:size=14}${exec hostname}
